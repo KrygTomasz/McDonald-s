@@ -32,14 +32,6 @@ class QuestionViewController: UIViewController {
         self.view.backgroundColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-    
     @objc func onYesButtonClicked() {
         self.dismiss(animated: true, completion: {
             self.promotionDelegate?.showPromotion()
@@ -47,9 +39,7 @@ class QuestionViewController: UIViewController {
     }
     
     @objc func onCancelButtonClicked() {
-        self.dismiss(animated: true, completion: {
-            
-        })
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

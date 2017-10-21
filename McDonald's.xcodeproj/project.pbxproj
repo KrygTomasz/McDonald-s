@@ -11,7 +11,7 @@
 		224CD3DB1F9B266900C53898 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CD3D91F9B266800C53898 /* QuestionViewController.swift */; };
 		229BFEF91F991E5D00D2E384 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BFEF81F991E5D00D2E384 /* UIView+Extensions.swift */; };
 		22B9E0841F97BBB3000957C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B9E0831F97BBB3000957C9 /* AppDelegate.swift */; };
-		22B9E0861F97BBB3000957C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B9E0851F97BBB3000957C9 /* ViewController.swift */; };
+		22B9E0861F97BBB3000957C9 /* PromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B9E0851F97BBB3000957C9 /* PromotionViewController.swift */; };
 		22B9E0891F97BBB3000957C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B9E0871F97BBB3000957C9 /* Main.storyboard */; };
 		22B9E08C1F97BBB3000957C9 /* McDonald_s.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22B9E08A1F97BBB3000957C9 /* McDonald_s.xcdatamodeld */; };
 		22B9E08E1F97BBB3000957C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B9E08D1F97BBB3000957C9 /* Assets.xcassets */; };
@@ -24,7 +24,7 @@
 		229BFEF81F991E5D00D2E384 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		22B9E0801F97BBB3000957C9 /* McDonald's.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "McDonald's.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B9E0831F97BBB3000957C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22B9E0851F97BBB3000957C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22B9E0851F97BBB3000957C9 /* PromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewController.swift; sourceTree = "<group>"; };
 		22B9E0881F97BBB3000957C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22B9E08B1F97BBB3000957C9 /* McDonald_s.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = McDonald_s.xcdatamodel; sourceTree = "<group>"; };
 		22B9E08D1F97BBB3000957C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		224CD3DC1F9B384B00C53898 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				224CD3D81F9B266800C53898 /* MainViewController.swift */,
+				224CD3D91F9B266800C53898 /* QuestionViewController.swift */,
+				22B9E0851F97BBB3000957C9 /* PromotionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		22B9E0771F97BBB3000957C9 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +72,9 @@
 		22B9E0821F97BBB3000957C9 /* McDonald's */ = {
 			isa = PBXGroup;
 			children = (
+				224CD3DC1F9B384B00C53898 /* ViewControllers */,
 				229BFEF81F991E5D00D2E384 /* UIView+Extensions.swift */,
 				22B9E0831F97BBB3000957C9 /* AppDelegate.swift */,
-				22B9E0851F97BBB3000957C9 /* ViewController.swift */,
-				224CD3D81F9B266800C53898 /* MainViewController.swift */,
-				224CD3D91F9B266800C53898 /* QuestionViewController.swift */,
 				22B9E0871F97BBB3000957C9 /* Main.storyboard */,
 				22B9E08D1F97BBB3000957C9 /* Assets.xcassets */,
 				22B9E08F1F97BBB3000957C9 /* LaunchScreen.storyboard */,
@@ -148,7 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B9E0861F97BBB3000957C9 /* ViewController.swift in Sources */,
+				22B9E0861F97BBB3000957C9 /* PromotionViewController.swift in Sources */,
 				22B9E0841F97BBB3000957C9 /* AppDelegate.swift in Sources */,
 				224CD3DB1F9B266900C53898 /* QuestionViewController.swift in Sources */,
 				229BFEF91F991E5D00D2E384 /* UIView+Extensions.swift in Sources */,
@@ -297,7 +305,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kryg.McDonald-s";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "kryg.McDonald-s";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

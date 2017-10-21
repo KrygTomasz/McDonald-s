@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PromotionViewController: UIViewController {
 
     @IBOutlet weak var mainImageView: UIImageView! {
         didSet {
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var timerLabel: UILabel! {
         didSet {
-            timerLabel.text = "04:59"
+            timerLabel.text = "05:00"
         }
     }
     @IBOutlet weak var dayLabel: UILabel! {
@@ -39,8 +39,8 @@ class ViewController: UIViewController {
     }
     
     var timer: Timer!
-    var min = 4
-    var sec = 59
+    var min = 5
+    var sec = 00
     var date: Date = Date() {
         didSet {
             let dateFormatter = DateFormatter()
@@ -58,9 +58,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         date = Date()
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        resizeFonts()
     }
 
     @objc func update() {
+        refreshTimerLabel()
+    }
+    
+    func refreshTimerLabel() {
         sec += -1
         if sec == -1 {
             sec = 59
@@ -75,6 +80,18 @@ class ViewController: UIViewController {
         } else {
             timerLabel.text = "0\(min):\(sec)"
         }
+    }
+    
+    func resizeFonts() {
+        let iphoneSEHeight: CGFloat = 568.0
+        let iphoneSEDaySize: CGFloat = 54.0
+        let iphoneSEMonthSize: CGFloat = 30.0
+        let screenHeight = UIScreen.main.bounds.height
+        let multiplier = screenHeight/iphoneSEHeight
+        let daySize = iphoneSEDaySize*multiplier
+        let monthSize = iphoneSEMonthSize*multiplier
+        dayLabel.font = dayLabel.font.withSize(daySize)
+        monthLabel.font = monthLabel.font.withSize(monthSize)
     }
 
 }
