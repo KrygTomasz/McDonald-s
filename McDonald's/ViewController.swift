@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mainImageView: UIImageView! {
         didSet {
-            mainImageView.image = #imageLiteral(resourceName: "mainImage")
+            mainImageView.image = #imageLiteral(resourceName: "promotionImage")
         }
     }
     @IBOutlet weak var timerView: UIView! {
